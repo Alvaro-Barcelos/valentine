@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha nenem ♥</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 text-gray-200 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-gray-700 p-6 rounded-xl shadow-2xl space-y-6 md:max-w-lg lg:max-w-xl">
+        <header class="text-center pb-4 border-b border-pink-400">
+            <h1 class="text-4xl font-extrabold text-pink-300 mb-2 leading-tight">Para Minha Neném ♥</h1>
+            <p class="text-lg text-gray-300">Um cantinho nosso, cheio de amor e lembranças!</p>
+        </header>
+
+        <section class="relative w-full overflow-hidden rounded-lg shadow-lg bg-gray-600">
+            <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                <div class="carousel-item w-full flex-shrink-0">
+                    <img src="images/festa_formando.jpg" alt="Festa de formandos" class="w-full h-96 object-cover rounded-lg">
+                    <p class="text-center mt-2 text-sm text-gray-300">Aquele dia inesquecível!</p>
+                </div>
+                <div class="carousel-item w-full flex-shrink-0">
+                    <img src="images/pos_exposicao.jpg" alt="Festa Junina" class="w-full h-96 object-cover rounded-lg">
+                    <p class="text-center mt-2 text-sm text-gray-300">Um date diferente!</p>
+                </div>
+                <div class="carousel-item w-full flex-shrink-0">
+                    <img src="images/formamos.jpg" alt="Momentos Felizes" class="w-full h-96 object-cover rounded-lg">
+                    <p class="text-center mt-2 text-sm text-gray-300">FORMAMOSSS!!!!</p>
+                </div>
+            </div>
+            <button id="prevBtn" class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-800/70 p-2 rounded-full shadow-md text-pink-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="nextBtn" class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-800/70 p-2 rounded-full shadow-md text-pink-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </section>
+
+        <section class="bg-gray-700 p-5 rounded-lg shadow-md text-center">
+            <h2 class="text-2xl font-bold text-pink-300 mb-4">Com todo o meu coração</h2>
+            <p class="text-gray-300 leading-relaxed text-justify">
+                Acredito que tudo acontece por uma razão, e você é a comprovação dessa fala. Cada momento que vivemos juntos é especial, desde o nosso primeiro encontro até as suas risadas de moto arrancando, cada instante é especial porque você está ao meu lado. Você é a razão do meu sorriso, a luz dos meus dias e a paz do meu coração. Você é o universo dentro de mim. Obrigado por ser quem você é, a mulher que me olha de longe e começa a dar risada, a mulher que não consegue andar sem trombar em mim, a mulher que ri das mesmas besteiras que eu, a mulher super esforçada, dedicada e maravilhosa. Te amo mais do que a distancia entre as galáxias  ❤️
+            </p>
+        </section>
+
+        <section class="bg-gradient-to-r from-gray-700 to-gray-800 p-5 rounded-lg shadow-inner text-center">
+            <h2 class="text-2xl font-bold text-pink-300 mb-4">Nosso Próximo Dia Especial</h2>
+            <p class="text-gray-300 mb-2 text-sm">Aniversário de Namoro: 28 de Julho de 2025</p>
+            <div id="countdown" class="flex justify-center items-center space-x-4 text-pink-400 font-bold text-3xl">
+                <div class="flex flex-col items-center">
+                    <span id="days" class="text-4sxl">00</span>
+                    <span class="text-lg">Dias</span>
+                </div>
+                <div class="text-5xl">:</div>
+                <div class="flex flex-col items-center">
+                    <span id="hours" class="text-4sxl">00</span>
+                    <span class="text-lg">Horas</span>
+                </div>
+                <div class="text-5xl">:</div>
+                <div class="flex flex-col items-center">
+                    <span id="minutes" class="text-4sxl">00</span>
+                    <span class="text-lg">Minutos</span>
+                </div>
+                <div class="text-5xl">:</div>
+                <div class="flex flex-col items-center">
+                    <span id="seconds" class="text-4sxl">00</span>
+                    <span class="text-lg">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-700 p-5 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-pink-300 mb-4 text-center">Nossa Galeria de Momentos</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="photo-item">
+                    <img src="images/festa_formando.jpg" alt="Foto 1" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/festa_formando.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/ano_novo.jpg" alt="Foto 2" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/ano_novo.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/dormindo.jpg" alt="Foto 3" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/dormindo.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/formamos.jpg" alt="Foto 4" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/formamos.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/corrida.jpg" alt="Foto 5" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/corrida.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/escola.jpg" alt="Foto 6" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/escola.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/madero.jpg" alt="Foto 7" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/madero.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/pos_exposicao.jpg" alt="Foto 8" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/pos_exposicao.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/juri_simulado.jpg" alt="Foto 9" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/juri_simulado.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/sitio.jpg" alt="Foto 10" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/sitio.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/unico_cabelo.jpg" alt="Foto 11" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/unico_cabelo.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/festa_formando.jpg" alt="Foto 12" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/festa_formando.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/festa_junina.jpg" alt="Foto 13" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/festa_junina.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/shooping.jpg" alt="Foto 14" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/shooping.jpg')">
+                </div>
+                <div class="photo-item">
+                    <img src="images/onibus.jpg" alt="Foto 14" class="w-full h-48 object-cover rounded-lg cursor-pointer" onclick="openModal('images/onibus.jpg')">
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center pt-4 border-t border-gray-600 text-gray-400 text-sm mt-6">
+            <p>&copy; 2025 Feito com amor para você. ❤️</p>
+        </footer>
+    </div>
+
+    <div id="photoModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50 hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-4xl max-h-4xl">
+            <img id="modalImage" src="" alt="Foto Ampliada" class="rounded-lg shadow-lg">
+        </div>
+        <button onclick="closeModal()" class="absolute top-4 right-4 bg-gray-800/70 p-2 rounded-full shadow-md text-pink-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-pink-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showCarouselItem(index) {
+            carouselItems.forEach(function(item) {
+                item.classList.remove('active');
+                item.style.display = 'none';
+            });
+            carouselItems[index].classList.add('active');
+            carouselItems[index].style.display = 'block';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showCarouselItem(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showCarouselItem(currentIndex);
+        });
+
+        showCarouselItem(currentIndex);
+
+        let autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showCarouselItem(currentIndex);
+        }, 5000); 
+
+        carousel.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        
+        carousel.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                showCarouselItem(currentIndex);
+            }, 5000);
+        });
+
+        const targetDate = new Date('2025-07-28T00:00:00').getTime(); 
+        const daysSpan = document.getElementById('days');
+        const hoursSpan = document.getElementById('hours');
+        const minutesSpan = document.getElementById('minutes');
+        const secondsSpan = document.getElementById('seconds');
+
+        function updateCountdown() {
+            const now = new Date().getTime(); 
+            const distance = targetDate - now; 
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysSpan.textContent = days < 10 ? '0' + days : days;
+            hoursSpan.textContent = hours < 10 ? '0' + hours : hours;
+            minutesSpan.textContent = minutes < 10 ? '0' + minutes : minutes;
+            secondsSpan.textContent = seconds < 10 ? '0' + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = "<p class='text-xl text-pink-700'>É o nosso dia especial!</p>";
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        function openModal(imgSrc) {
+            const modal = document.getElementById('photoModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imgSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex'); 
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

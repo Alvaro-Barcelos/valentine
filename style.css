@@ -1,0 +1,30 @@
+/* Define a fonte Inter como padrão para todo o corpo do documento */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Garante que o corpo ocupe 100% da altura da viewport, habilitando o layout flexível */
+    min-height: 100vh;
+}
+/* Estilos personalizados para o carrossel de fotos */
+.carousel-item {
+    display: none; /* Esconde todos os itens do carrossel por padrão */
+    transition: opacity 0.5s ease-in-out; /* Transição suave para a opacidade */
+}
+.carousel-item.active {
+    display: block; /* Mostra apenas o item ativo */
+    opacity: 1; /* Garante que o item ativo esteja totalmente visível */
+}
+/* Estilo para a barra de rolagem personalizada (somente para navegadores baseados em Webkit) */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do fundo da trilha da barra de rolagem */
+    border-radius: 10px; /* Cantos arredondados para a trilha */
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* Cor do "polegar" (a parte que arrastamos) da barra de rolagem */
+    border-radius: 10px; /* Cantos arredondados para o polegar */
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* Cor do polegar ao passar o mouse */
+}
